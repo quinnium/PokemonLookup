@@ -32,6 +32,12 @@
 		02BBDFE52C13630B001C919A /* CurvedBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBDFE42C13630B001C919A /* CurvedBackgroundView.swift */; };
 		02BBDFE82C136690001C919A /* Pokemon Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02BBDFE62C136690001C919A /* Pokemon Solid.ttf */; };
 		02BBDFE92C136690001C919A /* Pokemon Hollow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02BBDFE72C136690001C919A /* Pokemon Hollow.ttf */; };
+		02BBDFED2C138D93001C919A /* PokemonStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBDFEC2C138D93001C919A /* PokemonStat.swift */; };
+		02BBDFEF2C13A08A001C919A /* StatsChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBDFEE2C13A08A001C919A /* StatsChartView.swift */; };
+		02BBDFF22C13A18F001C919A /* StatsChartView+VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBDFF12C13A18F001C919A /* StatsChartView+VM.swift */; };
+		02BBDFF52C13A8C7001C919A /* StatBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBDFF42C13A8C7001C919A /* StatBarView.swift */; };
+		02BBDFF72C13AEE5001C919A /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBDFF62C13AEE5001C919A /* UIColor+Ext.swift */; };
+		02BBDFF92C13B249001C919A /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBDFF82C13B249001C919A /* Color+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +68,12 @@
 		02BBDFE62C136690001C919A /* Pokemon Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Solid.ttf"; sourceTree = "<group>"; };
 		02BBDFE72C136690001C919A /* Pokemon Hollow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Hollow.ttf"; sourceTree = "<group>"; };
 		02BBDFEB2C1366CE001C919A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		02BBDFEC2C138D93001C919A /* PokemonStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonStat.swift; sourceTree = "<group>"; };
+		02BBDFEE2C13A08A001C919A /* StatsChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsChartView.swift; sourceTree = "<group>"; };
+		02BBDFF12C13A18F001C919A /* StatsChartView+VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StatsChartView+VM.swift"; sourceTree = "<group>"; };
+		02BBDFF42C13A8C7001C919A /* StatBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatBarView.swift; sourceTree = "<group>"; };
+		02BBDFF62C13AEE5001C919A /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		02BBDFF82C13B249001C919A /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				02BBDFB92C130C24001C919A /* Collection+Ext.swift */,
+				02BBDFF62C13AEE5001C919A /* UIColor+Ext.swift */,
+				02BBDFF82C13B249001C919A /* Color+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -169,6 +183,7 @@
 				02BBDFC12C130C57001C919A /* Pokedex.swift */,
 				02BBDFC22C130C57001C919A /* PokedexEntry.swift */,
 				02BBDFC42C130C58001C919A /* Pokemon.swift */,
+				02BBDFEC2C138D93001C919A /* PokemonStat.swift */,
 				02BBDFC32C130C58001C919A /* PokemonSprite.swift */,
 			);
 			path = Model;
@@ -206,6 +221,7 @@
 			children = (
 				02BBDFDD2C135156001C919A /* PokemonDetailView.swift */,
 				02BBDFDF2C13516B001C919A /* PokemonDetailVIew+VM.swift */,
+				02BBDFF02C13A15A001C919A /* StatsChartView */,
 				02BBDFE32C1362ED001C919A /* Subviews */,
 			);
 			path = PokemonDetailView;
@@ -226,6 +242,24 @@
 				02BBDFE62C136690001C919A /* Pokemon Solid.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		02BBDFF02C13A15A001C919A /* StatsChartView */ = {
+			isa = PBXGroup;
+			children = (
+				02BBDFEE2C13A08A001C919A /* StatsChartView.swift */,
+				02BBDFF12C13A18F001C919A /* StatsChartView+VM.swift */,
+				02BBDFF32C13A880001C919A /* Subviews */,
+			);
+			path = StatsChartView;
+			sourceTree = "<group>";
+		};
+		02BBDFF32C13A880001C919A /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				02BBDFF42C13A8C7001C919A /* StatBarView.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,8 +341,11 @@
 				02BBDFD42C130C96001C919A /* PokedexEntryView+VM.swift in Sources */,
 				02BBDFD32C130C96001C919A /* PokedexEntryView.swift in Sources */,
 				02BBDFBE2C130C47001C919A /* PLError.swift in Sources */,
+				02BBDFED2C138D93001C919A /* PokemonStat.swift in Sources */,
 				02BBDFD02C130C83001C919A /* PokedexPageView+VM.swift in Sources */,
+				02BBDFF52C13A8C7001C919A /* StatBarView.swift in Sources */,
 				02BBDFDB2C1321A6001C919A /* PokemonImageView.swift in Sources */,
+				02BBDFF92C13B249001C919A /* Color+Ext.swift in Sources */,
 				02BBDFDE2C135156001C919A /* PokemonDetailView.swift in Sources */,
 				02BBDFD82C130CA4001C919A /* PLCapsuleTextView.swift in Sources */,
 				02BBDFC52C130C58001C919A /* Pokedex.swift in Sources */,
@@ -316,8 +353,11 @@
 				02BBDFC82C130C58001C919A /* Pokemon.swift in Sources */,
 				02BBDFE02C13516B001C919A /* PokemonDetailVIew+VM.swift in Sources */,
 				02BBDFCC2C130C71001C919A /* LandingPageView.swift in Sources */,
+				02BBDFEF2C13A08A001C919A /* StatsChartView.swift in Sources */,
+				02BBDFF72C13AEE5001C919A /* UIColor+Ext.swift in Sources */,
 				02BBDFBF2C130C47001C919A /* Constants.swift in Sources */,
 				02BBDFC72C130C58001C919A /* PokemonSprite.swift in Sources */,
+				02BBDFF22C13A18F001C919A /* StatsChartView+VM.swift in Sources */,
 				02BBDFE52C13630B001C919A /* CurvedBackgroundView.swift in Sources */,
 				02BBDFD72C130CA4001C919A /* PLBrandedTextView.swift in Sources */,
 				02BBDFC02C130C47001C919A /* MockData.swift in Sources */,

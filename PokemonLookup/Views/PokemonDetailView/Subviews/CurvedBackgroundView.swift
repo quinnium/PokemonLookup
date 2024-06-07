@@ -14,13 +14,13 @@ struct CurvedBackgroundView: View {
     var body: some View {
         GeometryReader { geometry in
             Circle()
-                .foregroundStyle(Color(uiColor: .systemGray5))
+                .foregroundStyle(Color(uiColor: .systemGray5).gradient)
                 .frame(width: geometry.size.height)
                 .scaleEffect(ratio, anchor: .bottom)
                 .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
                 .offset(y: 200)
                 .onAppear {
-                    withAnimation(.easeInOut(duration: 0.8)) {
+                    withAnimation(.easeInOut(duration: 0.5)) {
                         ratio = 1
                     }
                 }

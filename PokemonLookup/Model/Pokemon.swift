@@ -12,11 +12,22 @@ class Pokemon: Decodable{
     let id: Int
     let name: String
     let sprites: PokemonSprites
+    let stats: [PokemonStat]
     
-    init(id: Int, name: String, sprites: PokemonSprites) {
+    // COmputed variables for more convenient calling of nested objects' URL strings
+    var smallImageURLString: String? {
+        sprites.frontDefault
+    }
+    
+    var largeImageURLString: String? {
+        sprites.other?.officialArtwork.frontDefault
+    }
+    
+    init(id: Int, name: String, sprites: PokemonSprites, stats: [PokemonStat]) {
         self.id = id
         self.name = name
         self.sprites = sprites
+        self.stats = stats
     }
 }
 

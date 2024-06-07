@@ -14,10 +14,13 @@ extension PokemonDetailView {
         private let pokemon: Pokemon
 
         var imageURLString: String? {
-            pokemon.sprites.other?.officialArtwork.frontDefault
+            pokemon.largeImageURLString
         }
         var name: String {
             pokemon.name
+        }
+        var stats: [PokemonStat] {
+            pokemon.stats
         }
 
         init(pokemon: Pokemon) {

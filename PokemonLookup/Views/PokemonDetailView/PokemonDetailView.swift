@@ -19,9 +19,11 @@ struct PokemonDetailView: View {
                 PokemonImageView(imageURL: viewModel.imageURLString, animate: true)
                     .frame(width: 230, height: 230)
                 PLBrandedTextView(text: viewModel.name, size: 50, color: .yellow, border: .blue)
+                StatsChartView(viewModel: StatsChartView.ViewModel(stats: viewModel.stats))
+                    .padding(40)
                 Spacer()
             }
-            // Offset to use more of the empty space taken by the Toolbar
+            // VStack offset to use more of the empty space taken by the Toolbar
             .offset(y: -80)
         }
         .navigationBarBackButtonHidden(true)

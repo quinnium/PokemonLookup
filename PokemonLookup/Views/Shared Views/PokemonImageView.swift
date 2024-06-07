@@ -25,7 +25,7 @@ struct PokemonImageView: View {
                         .offset(y: animate ? offset : 0)
                         .onAppear {
                             if animate {
-                                withAnimation(.easeInOut(duration: 0.8)) {
+                                withAnimation(.easeInOut(duration: 0.5)) {
                                     offset = 0
                                 }
                             }
@@ -45,5 +45,5 @@ struct PokemonImageView: View {
 }
 
 #Preview {
-    PokemonImageView(imageURL: MockData.pokemon.sprites.frontDefault ?? "", animate: true)
+    PokemonImageView(imageURL: MockData.pokemon.smallImageURLString, animate: true)
 }
