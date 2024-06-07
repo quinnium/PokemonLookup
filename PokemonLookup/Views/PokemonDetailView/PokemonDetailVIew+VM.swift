@@ -11,8 +11,15 @@ extension PokemonDetailView {
     @Observable
     class ViewModel {
         
-        let pokemon: Pokemon
-        
+        private let pokemon: Pokemon
+
+        var imageURLString: String? {
+            pokemon.sprites.other?.officialArtwork.frontDefault
+        }
+        var name: String {
+            pokemon.name
+        }
+
         init(pokemon: Pokemon) {
             self.pokemon = pokemon
         }

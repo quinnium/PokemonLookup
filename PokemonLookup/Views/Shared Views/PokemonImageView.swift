@@ -9,7 +9,9 @@ import SwiftUI
 
 struct PokemonImageView: View {
     // imageURL must be optional, as JSON could have a nil value
-    var imageURL: String?
+    let imageURL: String?
+    var animate: Bool = false
+    @State var offset: CGFloat = -200
     
     var body: some View {
         AsyncImage(url: URL(string: imageURL ?? "")) { phase in
@@ -20,6 +22,14 @@ struct PokemonImageView: View {
                     image
                         .resizable()
                         .scaledToFit()
+                        .offset(y: animate ? offset : 0)
+                        .onAppear {
+                            if animate {
+                                withAnimation(.easeInOut(duration: 0.8)) {
+                                    offset = 0
+                                }
+                            }
+                        }
                 case .failure(_):
                     RoundedRectangle(cornerRadius: 10)
                         .foregroundStyle(Color(uiColor: .systemGray4))
@@ -29,9 +39,11 @@ struct PokemonImageView: View {
                         .padding()
             }
         }
+        
+        
     }
 }
 
 #Preview {
-    PokemonImageView(imageURL: MockData.pokemon.sprites.frontDefault ?? "")
+    PokemonImageView(imageURL: MockData.pokemon.sprites.frontDefault ?? "", animate: true)
 }

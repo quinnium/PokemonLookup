@@ -29,6 +29,9 @@
 		02BBDFDB2C1321A6001C919A /* PokemonImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBDFDA2C1321A6001C919A /* PokemonImageView.swift */; };
 		02BBDFDE2C135156001C919A /* PokemonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBDFDD2C135156001C919A /* PokemonDetailView.swift */; };
 		02BBDFE02C13516B001C919A /* PokemonDetailVIew+VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBDFDF2C13516B001C919A /* PokemonDetailVIew+VM.swift */; };
+		02BBDFE52C13630B001C919A /* CurvedBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBDFE42C13630B001C919A /* CurvedBackgroundView.swift */; };
+		02BBDFE82C136690001C919A /* Pokemon Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02BBDFE62C136690001C919A /* Pokemon Solid.ttf */; };
+		02BBDFE92C136690001C919A /* Pokemon Hollow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02BBDFE72C136690001C919A /* Pokemon Hollow.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +58,10 @@
 		02BBDFDA2C1321A6001C919A /* PokemonImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonImageView.swift; sourceTree = "<group>"; };
 		02BBDFDD2C135156001C919A /* PokemonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailView.swift; sourceTree = "<group>"; };
 		02BBDFDF2C13516B001C919A /* PokemonDetailVIew+VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PokemonDetailVIew+VM.swift"; sourceTree = "<group>"; };
+		02BBDFE42C13630B001C919A /* CurvedBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedBackgroundView.swift; sourceTree = "<group>"; };
+		02BBDFE62C136690001C919A /* Pokemon Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Solid.ttf"; sourceTree = "<group>"; };
+		02BBDFE72C136690001C919A /* Pokemon Hollow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Hollow.ttf"; sourceTree = "<group>"; };
+		02BBDFEB2C1366CE001C919A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,12 +94,14 @@
 		02BBDFA12C130A2F001C919A /* PokemonLookup */ = {
 			isa = PBXGroup;
 			children = (
+				02BBDFEB2C1366CE001C919A /* Info.plist */,
 				02BBDFA22C130A2F001C919A /* PokemonLookupApp.swift */,
 				02BBDFB02C130B80001C919A /* Extensions */,
 				02BBDFB12C130B87001C919A /* Utilities */,
 				02BBDFB52C130BAB001C919A /* Model */,
 				02BBDFB42C130BA5001C919A /* Managers */,
 				02BBDFB32C130B9A001C919A /* Views */,
+				02BBDFEA2C136694001C919A /* Fonts */,
 				02BBDFA62C130A30001C919A /* Assets.xcassets */,
 				02BBDFA82C130A30001C919A /* Preview Content */,
 			);
@@ -128,6 +137,7 @@
 		02BBDFB22C130B92001C919A /* Shared Views */ = {
 			isa = PBXGroup;
 			children = (
+				02BBDFDA2C1321A6001C919A /* PokemonImageView.swift */,
 				02BBDFD52C130CA4001C919A /* PLBrandedTextView.swift */,
 				02BBDFD62C130CA4001C919A /* PLCapsuleTextView.swift */,
 			);
@@ -179,7 +189,6 @@
 			children = (
 				02BBDFD12C130C96001C919A /* PokedexEntryView.swift */,
 				02BBDFD22C130C96001C919A /* PokedexEntryView+VM.swift */,
-				02BBDFD92C132121001C919A /* Subviews */,
 			);
 			path = PokedexEntryView;
 			sourceTree = "<group>";
@@ -192,21 +201,31 @@
 			path = LandingPage;
 			sourceTree = "<group>";
 		};
-		02BBDFD92C132121001C919A /* Subviews */ = {
-			isa = PBXGroup;
-			children = (
-				02BBDFDA2C1321A6001C919A /* PokemonImageView.swift */,
-			);
-			path = Subviews;
-			sourceTree = "<group>";
-		};
 		02BBDFDC2C135138001C919A /* PokemonDetailView */ = {
 			isa = PBXGroup;
 			children = (
 				02BBDFDD2C135156001C919A /* PokemonDetailView.swift */,
 				02BBDFDF2C13516B001C919A /* PokemonDetailVIew+VM.swift */,
+				02BBDFE32C1362ED001C919A /* Subviews */,
 			);
 			path = PokemonDetailView;
+			sourceTree = "<group>";
+		};
+		02BBDFE32C1362ED001C919A /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				02BBDFE42C13630B001C919A /* CurvedBackgroundView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		02BBDFEA2C136694001C919A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				02BBDFE72C136690001C919A /* Pokemon Hollow.ttf */,
+				02BBDFE62C136690001C919A /* Pokemon Solid.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +286,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02BBDFE92C136690001C919A /* Pokemon Hollow.ttf in Resources */,
+				02BBDFE82C136690001C919A /* Pokemon Solid.ttf in Resources */,
 				02BBDFAA2C130A30001C919A /* Preview Assets.xcassets in Resources */,
 				02BBDFA72C130A30001C919A /* Assets.xcassets in Resources */,
 			);
@@ -297,6 +318,7 @@
 				02BBDFCC2C130C71001C919A /* LandingPageView.swift in Sources */,
 				02BBDFBF2C130C47001C919A /* Constants.swift in Sources */,
 				02BBDFC72C130C58001C919A /* PokemonSprite.swift in Sources */,
+				02BBDFE52C13630B001C919A /* CurvedBackgroundView.swift in Sources */,
 				02BBDFD72C130CA4001C919A /* PLBrandedTextView.swift in Sources */,
 				02BBDFC02C130C47001C919A /* MockData.swift in Sources */,
 			);
@@ -434,6 +456,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PokemonLookup/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PokemonLookup/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -466,6 +489,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PokemonLookup/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PokemonLookup/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
