@@ -10,9 +10,17 @@ import Foundation
 extension PokedexEntryView {
     @Observable class ViewModel {
         
-        let networkManager = NetworkManager()
-        let pokedexEntry: PokedexEntry
-        var pokemon: Pokemon?
+        private let networkManager = NetworkManager()
+        private let pokedexEntry: PokedexEntry
+        private var pokemon: Pokemon?
+        
+        var name: String {
+            guard pokemon != nil else { return pokedexEntry.name.capitalized }
+            return pokemon!.name.capitalized
+        }
+        var imageURLString: String? {
+            pokemon?.sprites.frontDefault
+        }
         
         init(pokedexEntry: PokedexEntry) {
             self.pokedexEntry = pokedexEntry
@@ -23,10 +31,14 @@ extension PokedexEntryView {
         
         private func fetchPokemon() async {
             do {
-                pokemon = try await networkManager.fetchPokemon(fromURLString: pokedexEntry.url)
+                let pokemon = try await networkManager.fetchPokemon(fromURLString: pokedexEntry.url)
+                // Setting ViewModel's pokemon object needs to happen on Main Thread
+                DispatchQueue.main.async {
+                    self.pokemon = pokemon
+                }
             } catch {
                 // TODO: Handle error properly
-                print("Failed to load Pokedex")
+                print("Failed to fetch Pokemon from PokedexEntry")
             }
         }
     }

@@ -33,6 +33,7 @@ actor NetworkManager {
         let (data, _) = try await session.data(from: url)
         // Decod JSON data
         let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
         do {
             let pokemon = try decoder.decode(Pokemon.self, from: data)
             return pokemon

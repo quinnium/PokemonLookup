@@ -35,7 +35,7 @@ extension PokedexPageView {
                 }
             } catch {
                 // TODO: Handle error properly
-                print("Failed to load Pokedex")
+                print("Failed to fetch Pokedex")
             }
         }
     }

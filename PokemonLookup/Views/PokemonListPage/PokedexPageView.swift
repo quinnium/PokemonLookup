@@ -13,13 +13,18 @@ struct PokedexPageView: View {
     
     var body: some View {
         NavigationStack {
-            // TODO: Needs to be lazy vstack
-            List(viewModel.displayedPokemon) { entry in
-//                Text(entry.name.capitalized)
-                PokedexEntryView(viewModel: PokedexEntryView.ViewModel(pokedexEntry: entry))
+            ScrollView {
+                LazyVStack(spacing: 5) {
+                    ForEach(viewModel.displayedPokemon) { entry in
+                        PokedexEntryView(viewModel: PokedexEntryView.ViewModel(pokedexEntry: entry))
+                            
+                    }
+                    
+                }
+                .padding(.horizontal, 10)
             }
-            .searchable(text: $viewModel.seachText, placement: .navigationBarDrawer)
-            .navigationTitle("Pokemon")
+            .searchable(text: $viewModel.seachText, placement: .automatic)
+            .navigationTitle("Pokemon Lookup")
         }
     }
 }

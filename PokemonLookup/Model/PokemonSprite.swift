@@ -7,6 +7,10 @@
 
 import Foundation
 
-class PokemonSprite: Decodable {
+class PokemonSprites: Decodable {
+    let frontDefault: String?
     
+    init(frontDefaultURLString: String) {
+        self.frontDefault = frontDefaultURLString
+    }
 }

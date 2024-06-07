@@ -9,14 +9,21 @@ import SwiftUI
 
 struct PokedexEntryView: View {
     
-    var viewModel: ViewModel
+    @State var viewModel: ViewModel
     
     var body: some View {
-        HStack {
-            Text("Name: ")
-            Text(viewModel.pokemon?.name.description ?? "...")
+        ZStack {
+            RoundedRectangle(cornerRadius: 10)
+                .foregroundStyle(Color(uiColor: .systemGray5))
+                HStack {
+                    PokemonImageView(imageURL: viewModel.imageURLString)
+                        .frame(width: 70)
+                        .padding(.horizontal, 10)
+                    Text(viewModel.name)
+                    Spacer()
+                }
         }
-        
+        .frame(height: 70)
     }
 }
 
