@@ -12,7 +12,7 @@ enum MockData {
                                                          url: "https://pokeapi.co/api/v2/pokemon/ditto")
     
     static let pokemon: Pokemon = Pokemon(id: 1,
-                                          name: "Test Name",
+                                          name: "Mock Name",
                                           sprites: PokemonSprites(frontDefaultURLString: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png"))
     static let pokemonImageURLString: String = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png"
 }

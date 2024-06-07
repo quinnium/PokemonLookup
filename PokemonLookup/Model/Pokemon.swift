@@ -7,7 +7,8 @@
 
 import Foundation
 
-class Pokemon: Decodable {
+class Pokemon: Decodable{
+
     let id: Int
     let name: String
     let sprites: PokemonSprites
@@ -18,3 +19,17 @@ class Pokemon: Decodable {
         self.sprites = sprites
     }
 }
+
+
+extension Pokemon: Equatable, Hashable {
+
+    static func == (lhs: Pokemon, rhs: Pokemon) -> Bool {
+        return lhs.id == rhs.id && lhs.name == rhs.name
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+        hasher.combine(name)
+    }
+}
+
