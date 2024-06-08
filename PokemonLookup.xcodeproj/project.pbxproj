@@ -16,7 +16,7 @@
 		02BBDFC02C130C47001C919A /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBDFBD2C130C47001C919A /* MockData.swift */; };
 		02BBDFC52C130C58001C919A /* Pokedex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBDFC12C130C57001C919A /* Pokedex.swift */; };
 		02BBDFC62C130C58001C919A /* PokedexEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBDFC22C130C57001C919A /* PokedexEntry.swift */; };
-		02BBDFC72C130C58001C919A /* PokemonSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBDFC32C130C58001C919A /* PokemonSprite.swift */; };
+		02BBDFC72C130C58001C919A /* PokemonSprites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBDFC32C130C58001C919A /* PokemonSprites.swift */; };
 		02BBDFC82C130C58001C919A /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBDFC42C130C58001C919A /* Pokemon.swift */; };
 		02BBDFCA2C130C61001C919A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBDFC92C130C61001C919A /* NetworkManager.swift */; };
 		02BBDFCC2C130C71001C919A /* LandingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBDFCB2C130C71001C919A /* LandingPageView.swift */; };
@@ -51,7 +51,7 @@
 		02BBDFBD2C130C47001C919A /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		02BBDFC12C130C57001C919A /* Pokedex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokedex.swift; sourceTree = "<group>"; };
 		02BBDFC22C130C57001C919A /* PokedexEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokedexEntry.swift; sourceTree = "<group>"; };
-		02BBDFC32C130C58001C919A /* PokemonSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonSprite.swift; sourceTree = "<group>"; };
+		02BBDFC32C130C58001C919A /* PokemonSprites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonSprites.swift; sourceTree = "<group>"; };
 		02BBDFC42C130C58001C919A /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		02BBDFC92C130C61001C919A /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		02BBDFCB2C130C71001C919A /* LandingPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingPageView.swift; sourceTree = "<group>"; };
@@ -183,8 +183,8 @@
 				02BBDFC12C130C57001C919A /* Pokedex.swift */,
 				02BBDFC22C130C57001C919A /* PokedexEntry.swift */,
 				02BBDFC42C130C58001C919A /* Pokemon.swift */,
+				02BBDFC32C130C58001C919A /* PokemonSprites.swift */,
 				02BBDFEC2C138D93001C919A /* PokemonStat.swift */,
-				02BBDFC32C130C58001C919A /* PokemonSprite.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -356,7 +356,7 @@
 				02BBDFEF2C13A08A001C919A /* StatsChartView.swift in Sources */,
 				02BBDFF72C13AEE5001C919A /* UIColor+Ext.swift in Sources */,
 				02BBDFBF2C130C47001C919A /* Constants.swift in Sources */,
-				02BBDFC72C130C58001C919A /* PokemonSprite.swift in Sources */,
+				02BBDFC72C130C58001C919A /* PokemonSprites.swift in Sources */,
 				02BBDFF22C13A18F001C919A /* StatsChartView+VM.swift in Sources */,
 				02BBDFE52C13630B001C919A /* CurvedBackgroundView.swift in Sources */,
 				02BBDFD72C130CA4001C919A /* PLBrandedTextView.swift in Sources */,
@@ -491,9 +491,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PokemonLookup/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PokemonLookup/Info.plist;
@@ -509,6 +511,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.quinnium.PokemonLookup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -524,9 +527,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PokemonLookup/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PokemonLookup/Info.plist;
@@ -542,6 +547,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.quinnium.PokemonLookup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;

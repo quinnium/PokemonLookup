@@ -45,5 +45,5 @@ struct PokemonImageView: View {
 }
 
 #Preview {
-    PokemonImageView(imageURL: MockData.pokemon.smallImageURLString, animate: true)
+    PokemonImageView(imageURL: MockData.pokemon.sprites.frontDefaultSmall, animate: true)
 }

@@ -14,7 +14,7 @@ extension PokemonDetailView {
         private let pokemon: Pokemon
 
         var imageURLString: String? {
-            pokemon.largeImageURLString
+            pokemon.sprites.frontDefaultLarge
         }
         var name: String {
             pokemon.name

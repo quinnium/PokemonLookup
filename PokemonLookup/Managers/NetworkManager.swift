@@ -20,6 +20,7 @@ actor NetworkManager {
         let (data, _) = try await session.data(from: url)
         // Decode JSON data
         let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
         do {
             let pokedex = try decoder.decode(Pokedex.self, from: data)
             return pokedex
@@ -29,9 +30,10 @@ actor NetworkManager {
     }
     
     func fetchPokemon(fromURLString urlString: String) async throws -> Pokemon {
+        // Fetch JSON data
         guard let url = URL(string: urlString) else { throw PLError.invalidURL}
         let (data, _) = try await session.data(from: url)
-        // Decod JSON data
+        // Decode JSON data
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         do {

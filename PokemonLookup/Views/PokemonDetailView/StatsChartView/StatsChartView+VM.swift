@@ -14,22 +14,22 @@ extension StatsChartView {
         private let stats: [PokemonStat]
         
         var valueHP: Int {
-            stats.first { $0.baseStatName == "hp" }?.baseStat ?? 0
+            stats.first { $0.name == Constants.StatNames.hp }?.value ?? 0
         }
         var valueAttack: Int {
-            stats.first { $0.baseStatName == "attack" }?.baseStat ?? 0
+            stats.first { $0.name == Constants.StatNames.attack }?.value ?? 0
         }
         var valueDefence: Int {
-            stats.first { $0.baseStatName == "defense" }?.baseStat ?? 0
+            stats.first { $0.name == Constants.StatNames.defense }?.value ?? 0
         }
         var valueSpecialAttack: Int {
-            stats.first { $0.baseStatName == "special-attack" }?.baseStat ?? 0
+            stats.first { $0.name == Constants.StatNames.specialAttack }?.value ?? 0
         }
         var valueSpecialDefence: Int {
-            stats.first { $0.baseStatName == "special-defense" }?.baseStat ?? 0
+            stats.first { $0.name == Constants.StatNames.specialDefense }?.value ?? 0
         }
         var valueSpeed: Int {
-            stats.first { $0.baseStatName == "speed" }?.baseStat ?? 0
+            stats.first { $0.name == Constants.StatNames.speed }?.value ?? 0
         }
         var maxValue: Int {
             // By default, maximum value for chart is 300, but in the instance any of the stats' values exceed this, then it is automatically increased
