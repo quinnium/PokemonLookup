@@ -22,7 +22,7 @@ extension PokedexEntryView {
             return pokemon!.name.capitalized
         }
         var imageURLString: String? {
-            pokemon?.smallImageURLString
+            pokemon?.sprites.frontDefaultSmall
         }
         
         init(pokedexEntry: PokedexEntry) {

@@ -15,7 +15,7 @@ enum MockData {
 
     static let spriteSmall: String = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png"
     static let spriteLarge: String = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png"
-    static let pokemonSprites: PokemonSprites = PokemonSprites(frontDefaultURLString: spriteSmall, other: Artwork(officialArtwork: OfficialArtwork(frontDefault: spriteLarge)))
+    static let pokemonSprites: PokemonSprites = PokemonSprites(frontDefaultSmall: "", frontDefaultLarge: "")
     static let pokemonStats: [PokemonStat] = [PokemonStat(value: 45, name: "hp"),
                                               PokemonStat(value: 99, name: "attack"),
                                               PokemonStat(value: 60, name: "defense"),
