@@ -14,7 +14,7 @@ class Pokemon: Decodable{
     let sprites: PokemonSprites
     let stats: [PokemonStat]
     
-    // COmputed variables for more convenient calling of nested objects' URL strings
+    // Computed variables for more convenient calling of nested objects' URL strings
     var smallImageURLString: String? {
         sprites.frontDefault
     }

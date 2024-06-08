@@ -8,24 +8,28 @@
 import Foundation
 
 class PokemonStat: Decodable {
-    let baseStat: Int
-    let stat: StatInfo
-    
-    // Computed property for easier 'get' of stat name
-    var baseStatName: String {
-        stat.name
-    }
-    
-    init(baseStat: Int, stat: StatInfo) {
-        self.baseStat = baseStat
-        self.stat = stat
-    }
-}
-
-class StatInfo: Decodable {
+    let value: Int
     let name: String
     
-    init(name: String) {
+    enum CodingKeys: String, CodingKey {
+        // Keys for properties (including those within nested containers)
+        case value = "baseStat"
+        case name
+        // Key for nested container
+        case stat
+    }
+    
+    required init(from decoder: any Decoder) throws {
+        let container       = try decoder.container(keyedBy: CodingKeys.self)
+        self.value  = try container.decode(Int.self, forKey: .value)
+        
+        // 'Name' property is within a nested container named 'stat'
+        let statContainer   = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .stat)
+        self.name   = try statContainer.decode(String.self, forKey: .name)
+    }
+    
+    init(value: Int, name: String) {
+        self.value = value
         self.name = name
     }
 }

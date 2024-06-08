@@ -31,7 +31,7 @@ struct StatBarView: View {
                     Capsule()
                         .foregroundStyle(
                             LinearGradient(colors: [color.darkenByPercentage(by: 10),
-                                                    color.lightenByPercentage(by: 70)],
+                                                    color.lightenByPercentage(by: 40)],
                                            startPoint: .bottom, endPoint: .top))
                         .frame(width: barShowing ? CGFloat(value)/CGFloat(maximum) * geo.size.width : 0)
                         .onAppear {
