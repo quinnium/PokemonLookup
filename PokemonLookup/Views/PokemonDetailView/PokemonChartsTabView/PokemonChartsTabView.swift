@@ -25,11 +25,11 @@ struct PokemonChartsTabView: View {
                     .foregroundStyle(.background)
                     .opacity(0.4)
                 RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.white, lineWidth: 1)
+                    .stroke(Color.primary, lineWidth: 1)
             }
                 
         }
-        .frame(height: 300)
+        .frame(height: 280)
     }
 }
 

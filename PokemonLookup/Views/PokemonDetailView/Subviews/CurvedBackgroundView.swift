@@ -12,20 +12,39 @@ struct CurvedBackgroundView: View {
     @State var ratio: CGFloat = 0.5
     
     var body: some View {
-        GeometryReader { geometry in
+
+            
+        GeometryReader { geo in
+            let diameter = geo.size.width * 3
             Circle()
                 .foregroundStyle(Color(uiColor: .systemGray5).gradient)
-                .frame(width: geometry.size.height)
+                .frame(width: diameter, height: diameter)
+                .position(x: geo.size.width / 2, y: diameter / 2 + 100)
                 .scaleEffect(ratio, anchor: .bottom)
-                .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
-                .offset(y: 200)
                 .onAppear {
                     withAnimation(.easeInOut(duration: 0.5)) {
                         ratio = 1
                     }
                 }
+
         }
-        .ignoresSafeArea()
+
+        
+        
+//        GeometryReader { geometry in
+//            Circle()
+//                .foregroundStyle(Color(uiColor: .systemGray5).gradient)
+//                .frame(width: geometry.size.height)
+//                .scaleEffect(ratio, anchor: .bottom)
+//                .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
+//                .offset(y: 200)
+//                .onAppear {
+//                    withAnimation(.easeInOut(duration: 0.5)) {
+//                        ratio = 1
+//                    }
+//                }
+//        }
+//        .ignoresSafeArea()
     }
 }
 
