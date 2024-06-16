@@ -22,6 +22,11 @@ extension PokemonDetailView {
         var stats: [PokemonStat] {
             pokemon.stats
         }
+        
+        // View Models for subviews
+        var pokemonChartsTabViewModel: PokemonChartsTabView.ViewModel {
+            PokemonChartsTabView.ViewModel(pokemon: pokemon)
+        }
 
         init(pokemon: Pokemon) {
             self.pokemon = pokemon

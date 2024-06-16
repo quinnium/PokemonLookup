@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct PokemonDetailView: View {
-    @Environment(\.dismiss) var dismiss
     
     @State var viewModel: ViewModel
     
@@ -19,13 +18,12 @@ struct PokemonDetailView: View {
                 PokemonImageView(imageURL: viewModel.imageURLString, animate: true)
                     .frame(width: 230, height: 230)
                 PLBrandedTextView(text: viewModel.name, size: 50, color: .yellow, border: .blue)
-                StatsChartView(viewModel: StatsChartView.ViewModel(stats: viewModel.stats))
+                PokemonChartsTabView(viewModel: viewModel.pokemonChartsTabViewModel)
                     .padding(40)
                 Spacer()
             }
-            // VStack offset to use more of the empty space taken by the Toolbar
-            .offset(y: -80)
         }
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

@@ -41,8 +41,8 @@ extension StatsChartView {
                 (name: "HP", value: valueHP),
                 (name: "Attack", value: valueAttack),
                 (name: "Defence", value: valueDefence),
-                (name: "Sp. attack", value: valueSpecialAttack),
-                (name: "Sp. defence", value: valueSpecialDefence),
+                (name: "Sp.Attack", value: valueSpecialAttack),
+                (name: "Sp.Defence", value: valueSpecialDefence),
                 (name: "Speed", value: valueSpeed)
             ]
         }

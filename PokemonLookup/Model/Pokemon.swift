@@ -13,12 +13,14 @@ class Pokemon: Decodable{
     let name: String
     let sprites: PokemonSprites
     let stats: [PokemonStat]
+    let weight: Int
     
-    init(id: Int, name: String, sprites: PokemonSprites, stats: [PokemonStat]) {
+    init(id: Int, name: String, sprites: PokemonSprites, stats: [PokemonStat], weight: Int) {
         self.id = id
         self.name = name
         self.sprites = sprites
         self.stats = stats
+        self.weight = weight
     }
 }
 

@@ -38,6 +38,11 @@
 		02BBDFF52C13A8C7001C919A /* StatBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBDFF42C13A8C7001C919A /* StatBarView.swift */; };
 		02BBDFF72C13AEE5001C919A /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBDFF62C13AEE5001C919A /* UIColor+Ext.swift */; };
 		02BBDFF92C13B249001C919A /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBDFF82C13B249001C919A /* Color+Ext.swift */; };
+		02DB0A6A2C1EF30E009CEC50 /* WeightChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DB0A692C1EF30E009CEC50 /* WeightChartView.swift */; };
+		02DB0A6C2C1EF355009CEC50 /* WeightChartView+VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DB0A6B2C1EF355009CEC50 /* WeightChartView+VM.swift */; };
+		02DB0A6F2C1EF717009CEC50 /* WidthPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DB0A6E2C1EF717009CEC50 /* WidthPreferenceKey.swift */; };
+		02DB0A722C1EFAA3009CEC50 /* PokemonChartsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DB0A712C1EFAA3009CEC50 /* PokemonChartsTabView.swift */; };
+		02DB0A742C1EFB18009CEC50 /* PokemonChartsTabView+VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DB0A732C1EFB18009CEC50 /* PokemonChartsTabView+VM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +79,11 @@
 		02BBDFF42C13A8C7001C919A /* StatBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatBarView.swift; sourceTree = "<group>"; };
 		02BBDFF62C13AEE5001C919A /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		02BBDFF82C13B249001C919A /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		02DB0A692C1EF30E009CEC50 /* WeightChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightChartView.swift; sourceTree = "<group>"; };
+		02DB0A6B2C1EF355009CEC50 /* WeightChartView+VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeightChartView+VM.swift"; sourceTree = "<group>"; };
+		02DB0A6E2C1EF717009CEC50 /* WidthPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthPreferenceKey.swift; sourceTree = "<group>"; };
+		02DB0A712C1EFAA3009CEC50 /* PokemonChartsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonChartsTabView.swift; sourceTree = "<group>"; };
+		02DB0A732C1EFB18009CEC50 /* PokemonChartsTabView+VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PokemonChartsTabView+VM.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +122,7 @@
 				02BBDFB12C130B87001C919A /* Utilities */,
 				02BBDFB52C130BAB001C919A /* Model */,
 				02BBDFB42C130BA5001C919A /* Managers */,
+				02DB0A6D2C1EF6FF009CEC50 /* PreferenceKeys */,
 				02BBDFB32C130B9A001C919A /* Views */,
 				02BBDFEA2C136694001C919A /* Fonts */,
 				02BBDFA62C130A30001C919A /* Assets.xcassets */,
@@ -221,7 +232,7 @@
 			children = (
 				02BBDFDD2C135156001C919A /* PokemonDetailView.swift */,
 				02BBDFDF2C13516B001C919A /* PokemonDetailVIew+VM.swift */,
-				02BBDFF02C13A15A001C919A /* StatsChartView */,
+				02DB0A702C1EFA4F009CEC50 /* PokemonChartsTabView */,
 				02BBDFE32C1362ED001C919A /* Subviews */,
 			);
 			path = PokemonDetailView;
@@ -260,6 +271,34 @@
 				02BBDFF42C13A8C7001C919A /* StatBarView.swift */,
 			);
 			path = Subviews;
+			sourceTree = "<group>";
+		};
+		02DB0A682C1EF2EE009CEC50 /* WeightChartView */ = {
+			isa = PBXGroup;
+			children = (
+				02DB0A692C1EF30E009CEC50 /* WeightChartView.swift */,
+				02DB0A6B2C1EF355009CEC50 /* WeightChartView+VM.swift */,
+			);
+			path = WeightChartView;
+			sourceTree = "<group>";
+		};
+		02DB0A6D2C1EF6FF009CEC50 /* PreferenceKeys */ = {
+			isa = PBXGroup;
+			children = (
+				02DB0A6E2C1EF717009CEC50 /* WidthPreferenceKey.swift */,
+			);
+			path = PreferenceKeys;
+			sourceTree = "<group>";
+		};
+		02DB0A702C1EFA4F009CEC50 /* PokemonChartsTabView */ = {
+			isa = PBXGroup;
+			children = (
+				02DB0A712C1EFAA3009CEC50 /* PokemonChartsTabView.swift */,
+				02DB0A732C1EFB18009CEC50 /* PokemonChartsTabView+VM.swift */,
+				02BBDFF02C13A15A001C919A /* StatsChartView */,
+				02DB0A682C1EF2EE009CEC50 /* WeightChartView */,
+			);
+			path = PokemonChartsTabView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,17 +384,22 @@
 				02BBDFD02C130C83001C919A /* PokedexPageView+VM.swift in Sources */,
 				02BBDFF52C13A8C7001C919A /* StatBarView.swift in Sources */,
 				02BBDFDB2C1321A6001C919A /* PokemonImageView.swift in Sources */,
+				02DB0A6F2C1EF717009CEC50 /* WidthPreferenceKey.swift in Sources */,
+				02DB0A722C1EFAA3009CEC50 /* PokemonChartsTabView.swift in Sources */,
 				02BBDFF92C13B249001C919A /* Color+Ext.swift in Sources */,
 				02BBDFDE2C135156001C919A /* PokemonDetailView.swift in Sources */,
+				02DB0A6C2C1EF355009CEC50 /* WeightChartView+VM.swift in Sources */,
 				02BBDFD82C130CA4001C919A /* PLCapsuleTextView.swift in Sources */,
 				02BBDFC52C130C58001C919A /* Pokedex.swift in Sources */,
 				02BBDFBA2C130C24001C919A /* Collection+Ext.swift in Sources */,
 				02BBDFC82C130C58001C919A /* Pokemon.swift in Sources */,
 				02BBDFE02C13516B001C919A /* PokemonDetailVIew+VM.swift in Sources */,
 				02BBDFCC2C130C71001C919A /* LandingPageView.swift in Sources */,
+				02DB0A742C1EFB18009CEC50 /* PokemonChartsTabView+VM.swift in Sources */,
 				02BBDFEF2C13A08A001C919A /* StatsChartView.swift in Sources */,
 				02BBDFF72C13AEE5001C919A /* UIColor+Ext.swift in Sources */,
 				02BBDFBF2C130C47001C919A /* Constants.swift in Sources */,
+				02DB0A6A2C1EF30E009CEC50 /* WeightChartView.swift in Sources */,
 				02BBDFC72C130C58001C919A /* PokemonSprites.swift in Sources */,
 				02BBDFF22C13A18F001C919A /* StatsChartView+VM.swift in Sources */,
 				02BBDFE52C13630B001C919A /* CurvedBackgroundView.swift in Sources */,
