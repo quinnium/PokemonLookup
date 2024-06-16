@@ -47,6 +47,8 @@ struct PLBrandedTextView: View {
         }
         // Vertical padding required here to avoid clipping of any underhanging letters due to this custom font
         .padding(.vertical)
+        .accessibilityElement()
+        .accessibilityLabel(text)
     }
 }
 

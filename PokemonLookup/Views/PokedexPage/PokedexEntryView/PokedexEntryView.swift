@@ -28,6 +28,8 @@ struct PokedexEntryView: View {
         .onTapGesture {
             viewModel.didTapView()
         }
+        .accessibilityLabel(viewModel.name)
+        .accessibilityAddTraits(.isButton)
     }
 }
 

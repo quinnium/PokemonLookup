@@ -23,6 +23,7 @@ struct PokemonDetailView: View {
                 VStack {
                     Spacer()
                     TextCapsuleView(text: "Information for \(viewModel.name)")
+                        .accessibilityAddTraits(.isHeader)
                         Spacer()
                     PokemonChartsTabView(viewModel: viewModel.pokemonChartsTabViewModel)
                         .padding(.horizontal, 40)

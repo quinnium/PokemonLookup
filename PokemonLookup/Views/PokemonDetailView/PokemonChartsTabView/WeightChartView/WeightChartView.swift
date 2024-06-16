@@ -21,6 +21,7 @@ struct WeightChartView: View {
                 .scaledToFit()
                 .frame(height: 75)
                 .scaleEffect(viewModel.imageScale, anchor: .bottom)
+                .accessibilityHidden(true)
             VStack {
                 Text(String(viewModel.displayedWeight))
                     .contentTransition(.numericText())
@@ -40,6 +41,7 @@ struct WeightChartView: View {
                 viewModel.imageScale = 1
             }
         }
+        .accessibilityElement(children: .combine)
     }
 }
 

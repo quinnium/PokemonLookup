@@ -58,6 +58,8 @@ struct StatsChartView: View {
                         .layoutPriority(1)
                     
                 }
+                .accessibilityElement()
+                .accessibilityLabel(stat.name + stat.value.description)
             }
             Spacer()
         }

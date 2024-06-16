@@ -26,6 +26,7 @@ struct CurvedBackgroundView: View {
                     }
                 }
         }
+        .accessibilityHidden(true)
     }
 }
 
