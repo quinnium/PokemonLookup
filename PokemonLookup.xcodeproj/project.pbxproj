@@ -161,7 +161,7 @@
 		02BBDFB32C130B9A001C919A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				02BBDFB62C130BBD001C919A /* PokemonListPage */,
+				02BBDFB62C130BBD001C919A /* PokedexPage */,
 				02BBDFDC2C135138001C919A /* PokemonDetailView */,
 				02BBDFB82C130BE7001C919A /* LandingPage */,
 				02BBDFB22C130B92001C919A /* Shared Views */,
@@ -189,14 +189,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		02BBDFB62C130BBD001C919A /* PokemonListPage */ = {
+		02BBDFB62C130BBD001C919A /* PokedexPage */ = {
 			isa = PBXGroup;
 			children = (
 				02BBDFCD2C130C83001C919A /* PokedexPageView.swift */,
 				02BBDFCE2C130C83001C919A /* PokedexPageView+VM.swift */,
 				02BBDFB72C130BCE001C919A /* PokedexEntryView */,
 			);
-			path = PokemonListPage;
+			path = PokedexPage;
 			sourceTree = "<group>";
 		};
 		02BBDFB72C130BCE001C919A /* PokedexEntryView */ = {

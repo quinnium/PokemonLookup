@@ -16,15 +16,16 @@ struct PokedexPageView: View {
             ScrollView {
                 LazyVStack(spacing: 5) {
                     ForEach(viewModel.displayedPokemon) { entry in
-                        PokedexEntryView(viewModel: PokedexEntryView.ViewModel(pokedexEntry: entry))
-                            
+                        PokedexEntryView(viewModel: PokedexEntryView.ViewModel(pokedexEntry: entry, selectedPokemon: $viewModel.selectedPokemon))
                     }
-                    
                 }
                 .padding(.horizontal, 10)
             }
             .searchable(text: $viewModel.seachText, placement: .automatic)
             .navigationTitle("Pokemon Lookup")
+            .navigationDestination(item: $viewModel.selectedPokemon) { pokemon in
+                PokemonDetailView(viewModel: PokemonDetailView.ViewModel(pokemon: pokemon))
+            }
         }
     }
 }

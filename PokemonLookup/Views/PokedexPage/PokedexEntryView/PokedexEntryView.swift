@@ -27,14 +27,9 @@ struct PokedexEntryView: View {
         .onTapGesture {
             viewModel.didTapView()
         }
-        /* Navigation is determined within this view (as oposed to higher up in the view hierarchy) because it is *this* view's viewModel that owns the 'Pokemon' object (needed to pass to the navigation destination).
-         Although the navigationDestination *could* be triggered higher up the hierarchy using a PokedexEntry's url, it would involve another API call, which would not be not optimal */
-        .navigationDestination(item: $viewModel.selectedPokemon) { pokemon in
-            PokemonDetailView(viewModel: PokemonDetailView.ViewModel(pokemon: pokemon))
-        }
     }
 }
 
 #Preview {
-    PokedexEntryView(viewModel: .init(pokedexEntry: MockData.pokedexEntry))
+    PokedexEntryView(viewModel: .init(pokedexEntry: MockData.pokedexEntry, selectedPokemon: .constant(nil)))
 }

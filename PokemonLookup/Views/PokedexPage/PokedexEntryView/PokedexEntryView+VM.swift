@@ -5,7 +5,7 @@
 //  Created by Quinn on 07/06/2024.
 //
 
-import Foundation
+import SwiftUI
 
 extension PokedexEntryView {
     @Observable class ViewModel {
@@ -13,11 +13,11 @@ extension PokedexEntryView {
         private let networkManager = NetworkManager()
         private let pokedexEntry: PokedexEntry
         private var pokemon: Pokemon?
-        var selectedPokemon: Pokemon?
+        var selectedPokemon: Binding<Pokemon?>
         
         var name: String {
             /* In case of any delay in receiving the pokemon object from the networkManager, we can use the 'backup' of the pokedexEntry's 'name'.
-             They should, in theoy, be exactly the same, but safer to use the name from the Pokemon object as that is the safer source. */
+             They should, in theoy, be exactly the same, but safer to use the name from the Pokemon object as that is the better source. */
             guard pokemon != nil else { return pokedexEntry.name.capitalized }
             return pokemon!.name.capitalized
         }
@@ -25,8 +25,9 @@ extension PokedexEntryView {
             pokemon?.sprites.frontDefaultSmall
         }
         
-        init(pokedexEntry: PokedexEntry) {
+        init(pokedexEntry: PokedexEntry, selectedPokemon: Binding<Pokemon?>) {
             self.pokedexEntry = pokedexEntry
+            self.selectedPokemon = selectedPokemon
             Task {
                 await fetchPokemon()
             }
@@ -46,7 +47,7 @@ extension PokedexEntryView {
         }
         
         func didTapView() {
-            selectedPokemon = pokemon
+            selectedPokemon.wrappedValue = pokemon
         }
     }
 }

@@ -14,10 +14,14 @@ extension PokedexPageView {
         
         private let networkManager = NetworkManager()
         private var allPokemon: [PokedexEntry] = []
+        var selectedPokemon: Pokemon?
         var seachText: String = ""
         var displayedPokemon: [PokedexEntry] {
-            guard seachText.isNotEmpty else { return allPokemon }
-            return allPokemon.filter { $0.name.lowercased().contains(seachText.lowercased()) }
+            if seachText.isEmpty {
+                return allPokemon
+            } else {
+                return allPokemon.filter { $0.name.lowercased().contains(seachText.lowercased()) }
+            }
         }
         
         init() {
