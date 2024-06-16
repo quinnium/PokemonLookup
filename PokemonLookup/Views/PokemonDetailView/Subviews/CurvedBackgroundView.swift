@@ -13,7 +13,6 @@ struct CurvedBackgroundView: View {
     
     var body: some View {
 
-            
         GeometryReader { geo in
             let diameter = geo.size.width * 3
             Circle()
@@ -26,25 +25,7 @@ struct CurvedBackgroundView: View {
                         ratio = 1
                     }
                 }
-
         }
-
-        
-        
-//        GeometryReader { geometry in
-//            Circle()
-//                .foregroundStyle(Color(uiColor: .systemGray5).gradient)
-//                .frame(width: geometry.size.height)
-//                .scaleEffect(ratio, anchor: .bottom)
-//                .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
-//                .offset(y: 200)
-//                .onAppear {
-//                    withAnimation(.easeInOut(duration: 0.5)) {
-//                        ratio = 1
-//                    }
-//                }
-//        }
-//        .ignoresSafeArea()
     }
 }
 
