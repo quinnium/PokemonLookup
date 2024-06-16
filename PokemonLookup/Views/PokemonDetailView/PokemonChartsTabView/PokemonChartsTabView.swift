@@ -20,9 +20,14 @@ struct PokemonChartsTabView: View {
         }
         .tabViewStyle(.page(indexDisplayMode: .always))
         .background {
-            RoundedRectangle(cornerRadius: 10)
-                .foregroundStyle(.background)
-                .opacity(0.4)
+            ZStack {
+                RoundedRectangle(cornerRadius: 10)
+                    .foregroundStyle(.background)
+                    .opacity(0.4)
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.white, lineWidth: 1)
+            }
+                
         }
         .frame(height: 300)
     }

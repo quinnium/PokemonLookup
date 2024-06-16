@@ -14,13 +14,21 @@ struct PokemonDetailView: View {
     var body: some View {
         ZStack {
             CurvedBackgroundView()
-            VStack(spacing: 0) {
-                PokemonImageView(imageURL: viewModel.imageURLString, animate: true)
-                    .frame(width: 230, height: 230)
-                PLBrandedTextView(text: viewModel.name, size: 50, color: .yellow, border: .blue)
-                PokemonChartsTabView(viewModel: viewModel.pokemonChartsTabViewModel)
-                    .padding(40)
-                Spacer()
+            DynamicStack {
+                VStack {
+                    PokemonImageView(imageURL: viewModel.imageURLString, animate: true)
+                        .frame(width: 230, height: 230)
+                    PLBrandedTextView(text: viewModel.name, size: 50, color: .yellow, border: .blue)
+                }
+                VStack {
+                    Spacer()
+                    TextCapsuleView(text: "Information for \(viewModel.name)")
+                        Spacer()
+                    PokemonChartsTabView(viewModel: viewModel.pokemonChartsTabViewModel)
+                        .padding(.horizontal, 40)
+                    Spacer()
+                }
+                
             }
         }
         .navigationBarTitleDisplayMode(.inline)
