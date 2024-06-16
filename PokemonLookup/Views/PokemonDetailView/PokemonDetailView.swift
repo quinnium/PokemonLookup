@@ -26,25 +26,12 @@ struct PokemonDetailView: View {
             // VStack offset to use more of the empty space taken by the Toolbar
             .offset(y: -80)
         }
-        .navigationBarBackButtonHidden(true)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button {
-                    dismiss()
-                } label: {
-                    HStack {
-                        Image(systemName: "chevron.left")
-                        Text("Back")
-                    }
-                }
-            }
-        }  
     }
 }
 
 #Preview {
     NavigationStack {
         PokemonDetailView(viewModel: .init(pokemon: MockData.pokemon))
-            .navigationTitle(" ")
+            .navigationBarTitleDisplayMode(.inline)
     }
 }

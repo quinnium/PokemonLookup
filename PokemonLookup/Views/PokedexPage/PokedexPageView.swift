@@ -25,7 +25,7 @@ struct PokedexPageView: View {
                 .padding(.horizontal, 10)
             }
             .searchable(text: $viewModel.seachText, placement: .automatic)
-            .navigationTitle("Pokemon Lookup")
+            .navigationTitle("Pokedex")
             .navigationDestination(item: $viewModel.selectedPokemon) { pokemon in
                 PokemonDetailView(viewModel: PokemonDetailView.ViewModel(pokemon: pokemon))
             }

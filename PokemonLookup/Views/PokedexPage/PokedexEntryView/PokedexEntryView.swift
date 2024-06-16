@@ -18,8 +18,9 @@ struct PokedexEntryView: View {
             HStack {
                 PokemonImageView(imageURL: viewModel.imageURLString)
                     .frame(width: 70)
-                    .padding(.horizontal, 10)
                 Text(viewModel.name)
+                    .minimumScaleFactor(0.6)
+                    .lineLimit(1)
                 Spacer()
             }
         }

@@ -17,7 +17,7 @@ extension PokemonDetailView {
             pokemon.sprites.frontDefaultLarge
         }
         var name: String {
-            pokemon.name
+            pokemon.name.capitalized
         }
         var stats: [PokemonStat] {
             pokemon.stats
