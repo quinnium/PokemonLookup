@@ -17,7 +17,7 @@ struct TextCapsuleView: View {
             .padding(.vertical, 5)
             .background {
                 Capsule()
-                    .foregroundStyle(Color.white)
+                    .foregroundStyle(Color(uiColor: .darkText))
                     .opacity(0.2)
             }
     }
