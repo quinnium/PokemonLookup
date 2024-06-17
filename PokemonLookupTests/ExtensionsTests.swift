@@ -23,7 +23,6 @@ final class ExtensionsTests: XCTestCase {
     func test_lighten_by_more_then_oneHundredPercent_produces_white() {
         // Arrange
         let redColor = UIColor.red
-        let white = UIColor.white
         
         // Act
         let lightenedColor = redColor.lightenByPercentage(by: 100)
@@ -31,7 +30,7 @@ final class ExtensionsTests: XCTestCase {
         var green: CGFloat  = 0
         var blue: CGFloat   = 0
         var alpha: CGFloat  = 0
-        let components = lightenedColor.getRed(&red,
+        let _ = lightenedColor.getRed(&red,
                                                green: &green,
                                                blue: &blue,
                                                alpha: &alpha)
@@ -45,7 +44,6 @@ final class ExtensionsTests: XCTestCase {
     func test_darken_by_more_then_oneHundredPercent_produces_black() {
         // Arrange
         let redColor = UIColor.red
-        let black = UIColor.black
         
         // Act
         let lightenedColor = redColor.darkenByPercentage(by: 100)
@@ -53,7 +51,7 @@ final class ExtensionsTests: XCTestCase {
         var green: CGFloat  = 0
         var blue: CGFloat   = 0
         var alpha: CGFloat  = 0
-        let components = lightenedColor.getRed(&red,
+        let _ = lightenedColor.getRed(&red,
                                                green: &green,
                                                blue: &blue,
                                                alpha: &alpha)
