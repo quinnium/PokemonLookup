@@ -23,8 +23,6 @@ struct PLCapsuleTextView: View {
                 .font(.system(size: size))
                 .foregroundStyle(.white)
                 .padding(.horizontal, 50)
-                    
-
         }
     }
 }

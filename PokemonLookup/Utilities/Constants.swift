@@ -9,8 +9,8 @@ import Foundation
 
 enum Constants {
     
+    // The spelling of name strings returned by API's JSON response for each stat type
     enum StatNames {
-        // The spelling of name strings returned by API's JSON response for each stat type
         static let hp               = "hp"
         static let attack           = "attack"
         static let defense          = "defense"

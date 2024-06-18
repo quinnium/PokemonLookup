@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// Purely aesthetic stylised curved grey shape used as a background view for PokemonDetailView
 struct CurvedBackgroundView: View {
     
     @State var ratio: CGFloat = 0.5

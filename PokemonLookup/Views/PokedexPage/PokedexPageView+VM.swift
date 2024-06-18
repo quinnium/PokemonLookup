@@ -23,6 +23,9 @@ extension PokedexPageView {
                 return allPokemon.filter { $0.name.lowercased().contains(seachText.lowercased()) }
             }
         }
+        var pokedexIsEmpty: Bool {
+            allPokemon.isEmpty
+        }
         
         init() {
             Task {
@@ -38,8 +41,7 @@ extension PokedexPageView {
                     self.allPokemon = pokedex.results
                 }
             } catch {
-                // TODO: Handle error properly
-                print("Failed to fetch Pokedex")
+                print(PLError.unableToLoadPokedex)
             }
         }
     }

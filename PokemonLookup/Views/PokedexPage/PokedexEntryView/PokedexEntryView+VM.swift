@@ -17,7 +17,7 @@ extension PokedexEntryView {
         
         var name: String {
             /* In case of any delay in receiving the pokemon object from the networkManager, we can use the 'backup' of the pokedexEntry's 'name'.
-             They should, in theoy, be exactly the same, but safer to use the name from the Pokemon object as that is the better source. */
+             They should, in theory, be exactly the same, but safer to use the name from the Pokemon object as that is the better source. */
             guard pokemon != nil else { return pokedexEntry.name.capitalized }
             return pokemon!.name.capitalized
         }
@@ -41,8 +41,7 @@ extension PokedexEntryView {
                     self.pokemon = pokemon
                 }
             } catch {
-                // TODO: Handle error properly
-                print("Failed to fetch Pokemon from PokedexEntry")
+                print(PLError.failedToFetchPokemon)
             }
         }
         

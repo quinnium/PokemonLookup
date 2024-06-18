@@ -18,7 +18,6 @@ class PokemonStat: Decodable {
         case stat
     }
     
-    // init(from Decoder:) required since some properties inside nested objects
     required init(from decoder: any Decoder) throws {
         // 'Value' property isn't nested
         let container       = try decoder.container(keyedBy: CodingKeys.self)

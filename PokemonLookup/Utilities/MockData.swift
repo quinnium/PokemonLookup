@@ -7,12 +7,10 @@
 
 import Foundation
 
+// Mock data for use in Previews
 enum MockData {
-    
-    static let pokedexEntry: PokedexEntry = PokedexEntry(name: "Pidgeotto",
-                                                         url: "https://pokeapi.co/api/v2/pokemon/ditto")
+    static let pokedexEntry: PokedexEntry = PokedexEntry(name: "Pidgeotto", url: "https://pokeapi.co/api/v2/pokemon/ditto")
     static let pokemon: Pokemon = Pokemon(id: 1, name: "Pidgeotto", sprites: pokemonSprites, stats: pokemonStats, weight: 39)
-
     static let spriteSmall: String = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png"
     static let spriteLarge: String = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png"
     static let pokemonSprites: PokemonSprites = PokemonSprites(frontDefaultSmall: spriteSmall, frontDefaultLarge: spriteLarge)
